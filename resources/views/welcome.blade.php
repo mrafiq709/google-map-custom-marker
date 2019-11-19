@@ -4,86 +4,9 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Showing/Hiding Overlays</title>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-      * element that contains the map. */
-      #map {
-        height: 80%;
-    }
-    /* Optional: Makes the sample page fill the window. */
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .customMarker {
-        position:absolute;
-        cursor:pointer;
-        background:#424242;
-        width:40px;
-        height:40px;
-        /* -width/2 */
-        margin-left:-50px;
-        /* -height + arrow */
-        margin-top:-110px;
-        border-radius:5px;
-        padding:0px;
-    }
-    .customMarker:after {
-        content:"";
-        position: absolute;
-        bottom: -10px;
-        left: 10px;
-        border-width: 10px 10px 0;
-        border-style: solid;
-        border-color: #424242 transparent;
-        display: block;
-        width: 0;
-    }
-
-    .bigMarker {
-        position:absolute;
-        cursor:pointer;
-        background:#257BC1;
-        width:100px;
-        height:100px;
-        /* -width/2 */
-        margin-left:-79px;
-        /* -height + arrow */
-        margin-top:-170px;
-        border-radius:5px;
-        padding:0px;
-    }
-
-    .bigMarker:after {
-        content:"";
-        position: absolute;
-        bottom: -10px;
-        left: 39px;
-        border-width: 10px 10px 0;
-        border-style: solid;
-        border-color: #257BC1 transparent;
-        display: block;
-        width: 0;
-    }
-    .customMarker img {
-        width:36px;
-        height:35px;
-        margin:2px;
-        border-radius:5px;
-    }
-
-    .bigMarker img {
-        width:96px;
-        height:96px;
-        margin:2px;
-        border-radius:5px;
-    }
-
-</style>
-<script src="https://maps.googleapis.com/maps/api/js?key={{ env('MAP_KEY') }}"></script>
-<script>
+    <link rel="stylesheet" type="text/css" href="{{asset('css/marker.css')}}">
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ env('MAP_KEY') }}"></script>
+    <script>
       // This example adds hide() and show() methods to a custom overlay's prototype.
       // These methods toggle the visibility of the container <div>.
       // Additionally, we add a toggleDOM() method, which attaches or detaches the
@@ -199,7 +122,7 @@
 
             // Small Marker Styles
             var customSmallMarker = document.getElementsByClassName("customMarker")[0];
-            customSmallMarker.style.backgroundColor = 'black';
+            customSmallMarker.style.backgroundColor = '#424242';
         }
         
         toggle++;
