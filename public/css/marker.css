@@ -1,75 +1,30 @@
-/* Always set the map height explicitly to define the size of the div
-      * element that contains the map. */
-      #map {
-        height: 80%;
-    }
-    /* Optional: Makes the sample page fill the window. */
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .customMarker {
-        position:absolute;
-        cursor:pointer;
-        background:#424242;
-        width:40px;
-        height:40px;
-        /* -width/2 */
-        margin-left:-50px;
-        /* -height + arrow */
-        margin-top:-110px;
-        border-radius:5px;
-        padding:0px;
-    }
-    .customMarker:after {
-        content:"";
-        position: absolute;
-        bottom: -10px;
-        left: 10px;
-        border-width: 10px 10px 0;
-        border-style: solid;
-        border-color: #424242 transparent;
-        display: block;
-        width: 0;
-    }
-
-    .bigMarker {
-        position:absolute;
-        cursor:pointer;
-        background:#257BC1;
-        width:100px;
-        height:100px;
-        /* -width/2 */
-        margin-left:-79px;
-        /* -height + arrow */
-        margin-top:-170px;
-        border-radius:5px;
-        padding:0px;
-    }
-
-    .bigMarker:after {
-        content:"";
-        position: absolute;
-        bottom: -10px;
-        left: 39px;
-        border-width: 10px 10px 0;
-        border-style: solid;
-        border-color: #257BC1 transparent;
-        display: block;
-        width: 0;
-    }
-    .customMarker img {
-        width:36px;
-        height:35px;
-        margin:2px;
-        border-radius:5px;
-    }
-
-    .bigMarker img {
-        width:96px;
-        height:96px;
-        margin:2px;
-        border-radius:5px;
-    }
+.customMarker {
+    position:absolute;
+    cursor:pointer;
+    background:#424242;
+    width:100px;
+    height:100px;
+    /* -width/2 */
+    margin-left:-50px;
+    /* -height + arrow */
+    margin-top:-110px;
+    border-radius:10px;
+    padding:0px;
+}
+.customMarker:after {
+    content:"";
+    position: absolute;
+    bottom: -10px;
+    left: 40px;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: #424242 transparent;
+    display: block;
+    width: 0;
+}
+.customMarker img {
+    width:90px;
+    height:90px;
+    margin:5px;
+    border-radius:10px;
+}
